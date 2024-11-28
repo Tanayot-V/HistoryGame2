@@ -10,7 +10,7 @@ namespace CityTycoon
         [Header("<color=#FFFFFF>Ref.</color>")]
         private Image barFillImg;
         private EffectType effectType;
-        private BuildingBase.Earn currentEarnMain;
+        private Earn currentEarnMain;
 
         [SerializeField] private float timeSpawn;
         [SerializeField] private int amountEarned;
@@ -22,7 +22,7 @@ namespace CityTycoon
             barFillImg = _barFillImg;
         }
 
-        public void SetEarn(BuildingBase.Earn _earnClick, EffectType _effectType)
+        public void SetEarn(Earn _earnClick, EffectType _effectType)
         {
             effectType = _effectType;
             currentEarnMain = _earnClick;

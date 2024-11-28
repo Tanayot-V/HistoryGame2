@@ -28,7 +28,6 @@ namespace CityTycoon
 
         [Header("Data Building")]
         [SerializeField] private BCTime bcTime;
-        [SerializeField] private EraData eraData;
         [SerializeField] private UpgradeBuildingUI upgradeBuildingUI;
         [SerializeField] private UpgradeBuilding upgradeBuilding;
         [SerializeField] private CreateBuilding createBuilding;
@@ -130,11 +129,11 @@ namespace CityTycoon
         #endregion
 
         #region Data Building
-
+        /*
         public EraData EraData()
         {
             return DataCenterManager.GetData(ref eraData, "EraData");
-        }
+        }*/
 
         public UpgradeBuildingUI UpgradeBuildingUI()
         {

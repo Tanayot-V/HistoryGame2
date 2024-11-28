@@ -1,7 +1,6 @@
+using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace CityTycoon
 {
@@ -15,30 +14,6 @@ namespace CityTycoon
         public bool isResidence;
         public List<Upgrade> upgrades;
 
-        [System.Serializable]
-        public struct Upgrade
-        {
-            public string level;
-            public string displayName;
-            public Sprite icon;
-            public Sprite sprite;
-            public GameObject prefab;
-            public int maxPeople;//isResidence
-            public float speedUpBC;
-            public EffectType effectType;
-            public List<CurrencyCost> currencyCosts;
-            public Earn earnMain;
-            public Earn earnClick;
-        }
-
-        [System.Serializable]
-        public struct Earn
-        {
-            public CostType earnType;
-            public int[] range;
-            public float timeSpawn;
-        }
-
         public Upgrade GetUpgrade(int _level)
         {
             if (_level >= upgrades.Count)
@@ -48,12 +23,37 @@ namespace CityTycoon
             else
             {
                 return upgrades[_level];
-            } 
+            }
         }
     }
 
     [System.Serializable]
-    public struct CurrencyCost
+    public class Upgrade
+    {
+        public string level;
+        public string displayName;
+        public Sprite icon;
+        public Sprite sprite;
+        public GameObject prefab;
+        public int maxPeople;//isResidence
+        public float speedUpBC;
+        public EffectType effectType;
+        public List<CurrencyCost> currencyCosts;
+        public Earn earnMain;
+        public Earn earnClick;
+
+    }
+
+    [System.Serializable]
+    public class Earn
+    {
+        public CostType earnType;
+        public int[] range;
+        public float timeSpawn;
+    }
+
+    [System.Serializable]
+    public class CurrencyCost
     {
         public CostType costType;
         public int amount;

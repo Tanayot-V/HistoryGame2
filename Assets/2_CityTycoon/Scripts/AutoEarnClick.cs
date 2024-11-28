@@ -12,7 +12,7 @@ namespace CityTycoon
         private GameObject earnParent;
         private EarnButton earnButton;
         private EffectType effectType;
-        private BuildingBase.Earn currentEarnClick;
+        private Earn currentEarnClick;
 
         [SerializeField] private float timeSpawn;
         [SerializeField] private int amountEarned;        // จำนวนที่ได้รับ
@@ -25,7 +25,7 @@ namespace CityTycoon
             earnParent = _earnParent;
         }
 
-        public void SetEarn(BuildingBase.Earn _earnClick, EffectType _effectType)
+        public void SetEarn(Earn _earnClick, EffectType _effectType)
         {
             currentEarnClick = _earnClick;
             effectType = _effectType;

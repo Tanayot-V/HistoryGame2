@@ -49,7 +49,7 @@ namespace CityTycoon
 
         public void Update()
         {
-            /*
+            
             if (peopleFillImg != null)
             {
                 peopleFillImg.fillAmount = bCTime.deathTimer / 5f;
@@ -65,7 +65,7 @@ namespace CityTycoon
                     peopleInven.amount = 0;
                     SummaryView.Instance.OnLose();
                 }
-            }*/
+            }
         }
 
         private Coroutine victoryCoroutine;

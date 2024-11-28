@@ -46,7 +46,7 @@ if (Input.GetKeyDown(KeyCode.U))
 {
     UpgradeTime(100);
 }*/
-            /*
+            
             if (bcText != null) bcText.text = currentTime.ToString("f0");
             if (!isPaused)
             {
@@ -70,7 +70,7 @@ if (Input.GetKeyDown(KeyCode.U))
                     deathTimer = 0f; 
                 }
             }
-            */                              
+                                   
 
         }
 

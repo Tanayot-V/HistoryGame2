@@ -16,20 +16,21 @@ namespace CityTycoon
 
         [Header("Era")]
         [SerializeField] private int indexEra;
-        [SerializeField] private EraModelSO[] eraDataSO;
+        //[SerializeField] private EraModelSO[] eraDataSO;
         [SerializeField] EraModelSO currentEraModel;
         private BuildBaseModelData buildbasemodelData;
         private UpgradeBuildingUI upgradeBuildingUI;
-        private Currency currency;
         [SerializeField] private List<BuildBaseObj> baseBuildObjList;
         public TMPro.TextMeshProUGUI levelTX;
 
         public void Init()
         {
+
             SetInstance();
             indexEra = 0;
             //InitCreateBuilding(GameManager.Instance.EraData().eraDataSO[indexEra]);
-            InitCreateBuilding(eraDataSO[indexEra]);
+            //currentEraModel = eraDataSO[indexEra];
+            InitCreateBuilding(currentEraModel);
             upgradeBuildingUI.HideBuildUIObj();
             levelTX.text = "LV." + (indexEra + 1).ToString();
             //GameManager.Instance.DialogController().DialogControllerInit();
@@ -57,7 +58,6 @@ namespace CityTycoon
         {
             buildbasemodelData = GameManager.Instance.BuildBaseModelData();
             upgradeBuildingUI = GameManager.Instance.UpgradeBuildingUI();
-            currency = GameManager.Instance.Currency();
         }
 
         public void InitCreateBuilding(EraModelSO _eraModelSO = null)
@@ -71,7 +71,6 @@ namespace CityTycoon
                 buildBase.gameObject.name = o.name;
                 buildBase.transform.SetParent(parentBuild.transform);
                 baseBuildObjList.Add(buildBase);
-
                 //SetDataBuildings
                 buildBase.state = new BuildingBaseState(
                     o.baseID,

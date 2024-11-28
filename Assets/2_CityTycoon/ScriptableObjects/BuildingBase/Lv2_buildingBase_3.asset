@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98f6ee1d0df894bb997cb26ad8e2c91d, type: 3}
+  m_Name: Lv2_buildingBase_3
+  m_EditorClassIdentifier: 
+  baseID: LV2_BuildingBase_3
+  displayName: "\u0E15\u0E25\u0E32\u0E14"
+  position: {x: 4.62012, y: -2.40597, z: 0}
+  upgrades:
+  - level: Level_0
+    icon: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 32f4750252a0347a0b29b30103f195a1, type: 3}
+    prefab: {fileID: 8247743574971329326, guid: fc2e583b9daf044c7a566f1d6947a290, type: 3}
+    currencyCosts: []
+    earn:
+      costType: 0
+      amount: 0
+      timeSpawn: 0
+  - level: Level_1
+    icon: {fileID: 21300000, guid: 0bbe6da9d451f4850bac3c0b19c57eaf, type: 3}
+    sprite: {fileID: 21300000, guid: 0bbe6da9d451f4850bac3c0b19c57eaf, type: 3}
+    prefab: {fileID: 5877040111772632782, guid: 8fe6dd6181c874e7c8263f7dcc411778, type: 3}
+    currencyCosts:
+    - costType: 0
+      amount: 11
+    - costType: 1
+      amount: 12
+    - costType: 2
+      amount: 13
+    earn:
+      costType: 1
+      amount: 1
+      timeSpawn: 5
+  - level: Level_2
+    icon: {fileID: 21300000, guid: 223765a676457494c9003cb03fcda72e, type: 3}
+    sprite: {fileID: 21300000, guid: 223765a676457494c9003cb03fcda72e, type: 3}
+    prefab: {fileID: 4975411435628484950, guid: fc2137cd4af5d4e6982f0ba1a3538a15, type: 3}
+    currencyCosts:
+    - costType: 0
+      amount: 21
+    - costType: 1
+      amount: 22
+    - costType: 2
+      amount: 23
+    earn:
+      costType: 1
+      amount: 2
+      timeSpawn: 10
+  - level: Level_3
+    icon: {fileID: 21300000, guid: 08c6b2ccc052c43e2837ca0115b5dc6b, type: 3}
+    sprite: {fileID: 21300000, guid: 08c6b2ccc052c43e2837ca0115b5dc6b, type: 3}
+    prefab: {fileID: 8871934325508776918, guid: b971d2776d3a541f59b491f070305675, type: 3}
+    currencyCosts:
+    - costType: 0
+      amount: 21
+    - costType: 1
+      amount: 22
+    - costType: 2
+      amount: 23
+    earn:
+      costType: 1
+      amount: 2
+      timeSpawn: 10

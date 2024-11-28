@@ -1,0 +1,4 @@
+Dialog ID,Sentence ID,Text,Speaker ID,Emotion,Background,Next Action,Next Action ID
+dialog_1,1,เจ้าลิง เจ้าคืออารยธรรมที่สุดยอด!!,Capybara,IDLE,,,
+dialog_2,2,แน่นอน!!!!,Monkey,HAPPY,,,
+dialog_3,3,เริ่มสร้างเมืองกันได้เลย,Capybara,IDLE,,,

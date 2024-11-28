@@ -1,0 +1,61 @@
+
+Loading_1_part.png
+size: 2048,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+bg
+  rotate: false
+  xy: 2, 2
+  size: 1095, 1943
+  orig: 1097, 1945
+  offset: 1, 1
+  index: -1
+stone/2
+  rotate: false
+  xy: 1099, 365
+  size: 509, 394
+  orig: 511, 396
+  offset: 1, 1
+  index: -1
+stone/4
+  rotate: true
+  xy: 1099, 26
+  size: 337, 429
+  orig: 339, 431
+  offset: 1, 1
+  index: -1
+stone/5
+  rotate: true
+  xy: 1099, 761
+  size: 1184, 904
+  orig: 1186, 907
+  offset: 1, 1
+  index: -1
+
+Loading_1_part2.png
+size: 2048,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+stone/1
+  rotate: false
+  xy: 2, 1015
+  size: 1401, 1024
+  orig: 1403, 1026
+  offset: 1, 1
+  index: -1
+stone/3
+  rotate: true
+  xy: 1242, 2
+  size: 1011, 754
+  orig: 1013, 756
+  offset: 1, 1
+  index: -1
+stone/6
+  rotate: false
+  xy: 2, 64
+  size: 1238, 949
+  orig: 1240, 951
+  offset: 1, 1
+  index: -1

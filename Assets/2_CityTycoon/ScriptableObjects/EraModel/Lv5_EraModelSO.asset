@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab04e805815c2411b983b29d74c249a3, type: 3}
+  m_Name: Lv5_EraModelSO
+  m_EditorClassIdentifier: 
+  eraID: Lv5_Era
+  envPrefab: {fileID: 4486749432216939181, guid: da99caafb59024a52bfcfb38f62cc3de, type: 3}
+  entityPath: {fileID: 3442224418455445305, guid: bebb4f42342c94cceab00a6422644125, type: 3}
+  buildingBases:
+  - {fileID: 11400000, guid: 75c667522289d454f8127c3ca8aaf66a, type: 2}
+  - {fileID: 11400000, guid: 9070095b18eec4857b9f23067ff9a7fe, type: 2}
+  - {fileID: 11400000, guid: f2545009dbb184d6e9575de5873bea1d, type: 2}
+  - {fileID: 11400000, guid: faa5ffc94e63e4bbab751ee61aac12fa, type: 2}
+  - {fileID: 11400000, guid: 48d5e5bb452024efa948584f3cc0ecd4, type: 2}

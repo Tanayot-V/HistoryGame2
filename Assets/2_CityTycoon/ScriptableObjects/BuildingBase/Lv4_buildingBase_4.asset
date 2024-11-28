@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98f6ee1d0df894bb997cb26ad8e2c91d, type: 3}
+  m_Name: Lv4_buildingBase_4
+  m_EditorClassIdentifier: 
+  baseID: Lv4_BuildingBase_4
+  displayName: "\u0E17\u0E33\u0E07\u0E32\u0E19"
+  position: {x: -4.149305, y: -3.796447, z: 0}
+  upgrades:
+  - level: Level_0
+    icon: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 32f4750252a0347a0b29b30103f195a1, type: 3}
+    prefab: {fileID: 8247743574971329326, guid: fc2e583b9daf044c7a566f1d6947a290, type: 3}
+    currencyCosts: []
+    earn:
+      costType: 0
+      amount: 0
+      timeSpawn: 0
+  - level: Level_1
+    icon: {fileID: 21300000, guid: 09fa1cdcbf2e54b15b64e010fe187304, type: 3}
+    sprite: {fileID: 21300000, guid: 09fa1cdcbf2e54b15b64e010fe187304, type: 3}
+    prefab: {fileID: 2854736718205445664, guid: 8de05c8c9622a4d18a4106dd0ee7a74c, type: 3}
+    currencyCosts:
+    - costType: 0
+      amount: 11
+    - costType: 1
+      amount: 12
+    - costType: 2
+      amount: 13
+    earn:
+      costType: 2
+      amount: 1
+      timeSpawn: 5
+  - level: Level_2
+    icon: {fileID: 21300000, guid: 0834bfb9c2ee94d4f904a9bd8150b45d, type: 3}
+    sprite: {fileID: 21300000, guid: 0834bfb9c2ee94d4f904a9bd8150b45d, type: 3}
+    prefab: {fileID: 5313407488448103194, guid: 864c795565e4a44ec824b24205e1d9d8, type: 3}
+    currencyCosts:
+    - costType: 0
+      amount: 21
+    - costType: 1
+      amount: 22
+    - costType: 2
+      amount: 23
+    earn:
+      costType: 2
+      amount: 2
+      timeSpawn: 10
+  - level: Level_3
+    icon: {fileID: 21300000, guid: 1400b9995f17d43d3b4574be6aa4a22b, type: 3}
+    sprite: {fileID: 21300000, guid: 1400b9995f17d43d3b4574be6aa4a22b, type: 3}
+    prefab: {fileID: 4729912207696452747, guid: bdb34b7dbc57e45539714257eb1d5d41, type: 3}
+    currencyCosts:
+    - costType: 0
+      amount: 31
+    - costType: 1
+      amount: 32
+    - costType: 2
+      amount: 33
+    earn:
+      costType: 2
+      amount: 3
+      timeSpawn: 15

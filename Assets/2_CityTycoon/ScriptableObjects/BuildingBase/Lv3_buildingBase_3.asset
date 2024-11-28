@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98f6ee1d0df894bb997cb26ad8e2c91d, type: 3}
+  m_Name: Lv3_buildingBase_3
+  m_EditorClassIdentifier: 
+  baseID: Lv3_buildingBase_3
+  displayName: "\u0E41\u0E2B\u0E25\u0E48\u0E07\u0E1C\u0E25\u0E34\u0E15\u0E40\u0E04\u0E23\u0E37\u0E48\u0E2D\u0E07\u0E1B\u0E31\u0E49\u0E19"
+  position: {x: -2.233112, y: -0.5437505, z: 0}
+  upgrades:
+  - level: Level_0
+    icon: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 32f4750252a0347a0b29b30103f195a1, type: 3}
+    prefab: {fileID: 8247743574971329326, guid: fc2e583b9daf044c7a566f1d6947a290, type: 3}
+    currencyCosts: []
+    earn:
+      costType: 0
+      amount: 0
+      timeSpawn: 0
+  - level: Level_1
+    icon: {fileID: 21300000, guid: 155bc58d27b18444fbcbbe3050c70267, type: 3}
+    sprite: {fileID: 21300000, guid: 155bc58d27b18444fbcbbe3050c70267, type: 3}
+    prefab: {fileID: 4750409208002683594, guid: c6ecd9a53157545deb899b327f0ee49a, type: 3}
+    currencyCosts:
+    - costType: 0
+      amount: 11
+    - costType: 1
+      amount: 12
+    - costType: 2
+      amount: 13
+    earn:
+      costType: 1
+      amount: 1
+      timeSpawn: 5
+  - level: Level_2
+    icon: {fileID: 21300000, guid: 8501da2b744c345cb84db83f0b867abf, type: 3}
+    sprite: {fileID: 21300000, guid: 8501da2b744c345cb84db83f0b867abf, type: 3}
+    prefab: {fileID: 3680979981342415685, guid: d76ef46e930b0446fb8ff63bb8857713, type: 3}
+    currencyCosts:
+    - costType: 0
+      amount: 21
+    - costType: 1
+      amount: 22
+    - costType: 2
+      amount: 23
+    earn:
+      costType: 1
+      amount: 2
+      timeSpawn: 10
+  - level: Level_3
+    icon: {fileID: 21300000, guid: 473f0a453b5da49bb8f91b55e5d15cba, type: 3}
+    sprite: {fileID: 21300000, guid: 473f0a453b5da49bb8f91b55e5d15cba, type: 3}
+    prefab: {fileID: 1575202316318588160, guid: a58d427db6fd44d7a98cae46643ab530, type: 3}
+    currencyCosts:
+    - costType: 0
+      amount: 31
+    - costType: 1
+      amount: 32
+    - costType: 2
+      amount: 33
+    earn:
+      costType: 1
+      amount: 3
+      timeSpawn: 15

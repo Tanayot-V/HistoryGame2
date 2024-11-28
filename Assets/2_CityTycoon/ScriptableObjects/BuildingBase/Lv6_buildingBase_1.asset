@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98f6ee1d0df894bb997cb26ad8e2c91d, type: 3}
+  m_Name: Lv6_buildingBase_1
+  m_EditorClassIdentifier: 
+  baseID: Lv6_BuildingBase_1
+  displayName: "\u0E2B\u0E21\u0E39\u0E48\u0E1A\u0E49\u0E32\u0E19\u0E40\u0E23\u0E37\u0E2D\u0E19"
+  position: {x: -2.909306, y: 4.128489, z: 0}
+  upgrades:
+  - level: Level_0
+    icon: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 32f4750252a0347a0b29b30103f195a1, type: 3}
+    prefab: {fileID: 8247743574971329326, guid: fc2e583b9daf044c7a566f1d6947a290, type: 3}
+    currencyCosts: []
+    earn:
+      costType: 0
+      amount: 0
+      timeSpawn: 0
+  - level: Level_1
+    icon: {fileID: 21300000, guid: 0fb726c039fe948d29019238f496e839, type: 3}
+    sprite: {fileID: 21300000, guid: 0fb726c039fe948d29019238f496e839, type: 3}
+    prefab: {fileID: 1352830225780627440, guid: 4de12315b95994c88a6816cda6e3cb89, type: 3}
+    currencyCosts:
+    - costType: 0
+      amount: 11
+    - costType: 1
+      amount: 12
+    - costType: 2
+      amount: 13
+    earn:
+      costType: 0
+      amount: 1
+      timeSpawn: 5
+  - level: Level_2
+    icon: {fileID: 21300000, guid: cf54de65f84ac44309121c01618e7177, type: 3}
+    sprite: {fileID: 21300000, guid: cf54de65f84ac44309121c01618e7177, type: 3}
+    prefab: {fileID: 6864644393633050839, guid: 94f54a407574841e3b3a8c48b1ca8b82, type: 3}
+    currencyCosts:
+    - costType: 0
+      amount: 21
+    - costType: 1
+      amount: 22
+    - costType: 2
+      amount: 23
+    earn:
+      costType: 0
+      amount: 2
+      timeSpawn: 10

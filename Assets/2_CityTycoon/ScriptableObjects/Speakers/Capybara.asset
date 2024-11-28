@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1034cb3a3bed547639d11dae62f13887, type: 3}
+  m_Name: Capybara
+  m_EditorClassIdentifier: 
+  speakerID: Capybara
+  speakerName: "\u0E04\u0E23\u0E32\u0E1B\u0E34\u0E1A\u0E32\u0E23\u0E48\u0E32"
+  textColor: {r: 0.5566038, g: 0.43032673, b: 0.07088822, a: 1}
+  characters:
+  - emotion: 0
+    sprite: {fileID: 21300000, guid: 24766fc90b7b0414cbf90c8103ff2e04, type: 3}
+  - emotion: 1
+    sprite: {fileID: 21300000, guid: 24766fc90b7b0414cbf90c8103ff2e04, type: 3}
+  - emotion: 2
+    sprite: {fileID: 21300000, guid: 24766fc90b7b0414cbf90c8103ff2e04, type: 3}
+  - emotion: 3
+    sprite: {fileID: 21300000, guid: 24766fc90b7b0414cbf90c8103ff2e04, type: 3}

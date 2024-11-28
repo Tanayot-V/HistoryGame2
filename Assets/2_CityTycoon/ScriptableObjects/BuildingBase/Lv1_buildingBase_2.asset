@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98f6ee1d0df894bb997cb26ad8e2c91d, type: 3}
+  m_Name: Lv1_buildingBase_2
+  m_EditorClassIdentifier: 
+  baseID: Lv1_BuildingBase_2
+  displayName: "\u0E15\u0E49\u0E19\u0E44\u0E21\u0E49"
+  position: {x: -4.725, y: -11.75, z: 0}
+  isResidence: 0
+  upgrades:
+  - level: Level_1
+    displayName: "\u0E15\u0E49\u0E19\u0E44\u0E21\u0E49"
+    icon: {fileID: 21300000, guid: 5b1cd1aba25864831bfd63b7a5ffed82, type: 3}
+    sprite: {fileID: 21300000, guid: 5b1cd1aba25864831bfd63b7a5ffed82, type: 3}
+    prefab: {fileID: 6536528719716053498, guid: 8c4b647fa557543ad9343c82476f1a35, type: 3}
+    maxPeople: 0
+    speedUpBC: 100
+    effectType: 1
+    currencyCosts:
+    - costType: 3
+      amount: 4
+    earnMain:
+      earnType: 3
+      range: 0000000004000000
+      timeSpawn: 3
+    earnClick:
+      earnType: 3
+      range: 0000000004000000
+      timeSpawn: 5
+  - level: Level_2
+    displayName: "\u0E19\u0E32\u0E02\u0E49\u0E32\u0E27\u0E40\u0E25\u0E47\u0E01"
+    icon: {fileID: 21300000, guid: 519681932649b43169942f6894723790, type: 3}
+    sprite: {fileID: 21300000, guid: 519681932649b43169942f6894723790, type: 3}
+    prefab: {fileID: 1588506320180713248, guid: 6f6c73d98c6074016beb9ca92e7192a0, type: 3}
+    maxPeople: 0
+    speedUpBC: 100
+    effectType: 0
+    currencyCosts:
+    - costType: 3
+      amount: 10
+    earnMain:
+      earnType: 3
+      range: 0100000005000000
+      timeSpawn: 3
+    earnClick:
+      earnType: 3
+      range: 0000000007000000
+      timeSpawn: 5
+  - level: Level_3
+    displayName: "\u0E41\u0E1B\u0E25\u0E07\u0E19\u0E32\u0E43\u0E2B\u0E0D\u0E48"
+    icon: {fileID: 21300000, guid: 449ecf7efdb354fd3aab6a385818cce1, type: 3}
+    sprite: {fileID: 21300000, guid: 449ecf7efdb354fd3aab6a385818cce1, type: 3}
+    prefab: {fileID: 1588506320180713248, guid: 6719b31a6a0694026a6969f137f700b9, type: 3}
+    maxPeople: 0
+    speedUpBC: 100
+    effectType: 0
+    currencyCosts: []
+    earnMain:
+      earnType: 3
+      range: 0100000006000000
+      timeSpawn: 3
+    earnClick:
+      earnType: 3
+      range: 0200000008000000
+      timeSpawn: 5

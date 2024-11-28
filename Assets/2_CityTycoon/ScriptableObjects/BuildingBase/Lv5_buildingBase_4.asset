@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98f6ee1d0df894bb997cb26ad8e2c91d, type: 3}
+  m_Name: Lv5_buildingBase_4
+  m_EditorClassIdentifier: 
+  baseID: Lv5_BuildingBase_4
+  displayName: "\u0E15\u0E25\u0E32\u0E14"
+  position: {x: 8.287508, y: 12.13844, z: 0}
+  upgrades:
+  - level: Level_0
+    icon: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 32f4750252a0347a0b29b30103f195a1, type: 3}
+    prefab: {fileID: 8247743574971329326, guid: fc2e583b9daf044c7a566f1d6947a290, type: 3}
+    currencyCosts: []
+    earn:
+      costType: 0
+      amount: 0
+      timeSpawn: 0
+  - level: Level_1
+    icon: {fileID: 21300000, guid: a9d5b1e08e85049f3a3abd13aed29b52, type: 3}
+    sprite: {fileID: 21300000, guid: a9d5b1e08e85049f3a3abd13aed29b52, type: 3}
+    prefab: {fileID: 8699499877525778883, guid: 1b7f1f41b40864119b0eb84a392ef4b8, type: 3}
+    currencyCosts:
+    - costType: 0
+      amount: 11
+    - costType: 1
+      amount: 12
+    - costType: 2
+      amount: 13
+    earn:
+      costType: 1
+      amount: 1
+      timeSpawn: 5
+  - level: Level_2
+    icon: {fileID: 21300000, guid: 903eb556c1f2b468ea403282aa0c083c, type: 3}
+    sprite: {fileID: 21300000, guid: 903eb556c1f2b468ea403282aa0c083c, type: 3}
+    prefab: {fileID: 501877164133411552, guid: e7cd34b9ae72840d29babbeb366773e8, type: 3}
+    currencyCosts:
+    - costType: 0
+      amount: 21
+    - costType: 1
+      amount: 22
+    - costType: 2
+      amount: 23
+    earn:
+      costType: 1
+      amount: 2
+      timeSpawn: 10
+  - level: Level_3
+    icon: {fileID: 21300000, guid: 3e7aa380f38e14cf5975a02e787ba12a, type: 3}
+    sprite: {fileID: 21300000, guid: 3e7aa380f38e14cf5975a02e787ba12a, type: 3}
+    prefab: {fileID: 1316485224767222377, guid: 9642bfcf59a4846cf93325e8468b1387, type: 3}
+    currencyCosts:
+    - costType: 0
+      amount: 31
+    - costType: 1
+      amount: 32
+    - costType: 2
+      amount: 33
+    earn:
+      costType: 1
+      amount: 3
+      timeSpawn: 15
+  - level: Level_4
+    icon: {fileID: 21300000, guid: 84bdd9e3633384bc2b73cf5f404ad1cb, type: 3}
+    sprite: {fileID: 21300000, guid: 84bdd9e3633384bc2b73cf5f404ad1cb, type: 3}
+    prefab: {fileID: 8761126225855552665, guid: 5c6dd912a63c7454abcf06cad2c64d8a, type: 3}
+    currencyCosts:
+    - costType: 0
+      amount: 31
+    - costType: 1
+      amount: 32
+    - costType: 2
+      amount: 33
+    earn:
+      costType: 1
+      amount: 3
+      timeSpawn: 15

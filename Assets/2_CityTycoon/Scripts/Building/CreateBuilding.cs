@@ -16,6 +16,7 @@ namespace CityTycoon
 
         [Header("Era")]
         [SerializeField] private int indexEra;
+        [SerializeField] private EraModelSO[] eraDataSO;
         [SerializeField] EraModelSO currentEraModel;
         private BuildBaseModelData buildbasemodelData;
         private UpgradeBuildingUI upgradeBuildingUI;
@@ -27,7 +28,8 @@ namespace CityTycoon
         {
             SetInstance();
             indexEra = 0;
-            InitCreateBuilding(GameManager.Instance.EraData().eraDataSO[indexEra]);
+            //InitCreateBuilding(GameManager.Instance.EraData().eraDataSO[indexEra]);
+            InitCreateBuilding(eraDataSO[indexEra]);
             upgradeBuildingUI.HideBuildUIObj();
             levelTX.text = "LV." + (indexEra + 1).ToString();
             //GameManager.Instance.DialogController().DialogControllerInit();

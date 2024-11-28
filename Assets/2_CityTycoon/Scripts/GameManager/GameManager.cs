@@ -42,7 +42,7 @@ namespace CityTycoon
 
         public void Start()
         {
-            /*
+            
             SoundManager.Instance.Init(audioModelSO);
             //SoundManager.Instance.PlayAudioSource("BGM_1");
             EffectManager.Instance.Init(effectModelSO);

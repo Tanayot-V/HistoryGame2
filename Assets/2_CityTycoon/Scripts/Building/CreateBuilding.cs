@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
+using Unity.VisualScripting;
 
 namespace CityTycoon
 {
@@ -18,7 +19,6 @@ namespace CityTycoon
         [SerializeField] private int indexEra;
         //[SerializeField] private EraModelSO[] eraDataSO;
         [SerializeField] EraModelSO currentEraModel;
-        private BuildBaseModelData buildbasemodelData;
         private UpgradeBuildingUI upgradeBuildingUI;
         [SerializeField] private List<BuildBaseObj> baseBuildObjList;
         public TMPro.TextMeshProUGUI levelTX;
@@ -56,7 +56,6 @@ namespace CityTycoon
 
         private void SetInstance()
         {
-            buildbasemodelData = GameManager.Instance.BuildBaseModelData();
             upgradeBuildingUI = GameManager.Instance.UpgradeBuildingUI();
         }
 
@@ -65,6 +64,7 @@ namespace CityTycoon
             currentEraModel = _eraModelSO;
             UiController.Instance.DestorySlot(upgradeBuildingUI.earnParent);
             UiController.Instance.DestorySlot(parentBuild);
+            UiController.Instance.DestorySlot(upgradeBuildingUI.nameParent);
             baseBuildObjList.Clear();
             _eraModelSO.buildingBases.ToList().ForEach(o => {
                 BuildBaseObj buildBase = Instantiate(basePrefab, o.position, Quaternion.identity).GetComponent<BuildBaseObj>();
@@ -72,30 +72,35 @@ namespace CityTycoon
                 buildBase.transform.SetParent(parentBuild.transform);
                 baseBuildObjList.Add(buildBase);
                 //SetDataBuildings
-                buildBase.state = new BuildingBaseState(
-                    o.baseID,
-                    buildbasemodelData.GetBuildingBaseSO(o.baseID),
-                    1,
-                    o.position );
+                buildBase.state = new BuildingBaseState(o.baseID,o,1,o.position );
 
                 buildBase.buildingBaseRef = o;
                 buildBase.upgradesRef = o.upgrades;
                 buildBase.upgradesCurrerntRef = o.upgrades[0];
-                buildBase.GetComponent<BuildBaseObj>().SetBuildingBaseState();
+                buildBase.SetBuildingBaseState();
 
                 if (buildBase.buildingBaseRef.isResidence)
                 {
                     GameManager.Instance.PeopleController().SetPeopleMax(buildBase,buildBase.upgradesCurrerntRef.maxPeople);
                 }
+
+                //Name Display
+                WorldToUIPos nameDisplay = UiController.Instance.InstantiateUIView(upgradeBuildingUI.namePrefab, upgradeBuildingUI.nameParent).GetComponent<WorldToUIPos>();
+                nameDisplay.targetTransform = buildBase.transform;
+                nameDisplay.offsetX = buildBase.upgradesCurrerntRef.nameOffset.x;
+                nameDisplay.offsetY = buildBase.upgradesCurrerntRef.nameOffset.y;
+                nameDisplay.transform.GetChild(0).GetComponent<TMPro.TextMeshProUGUI>().text = $"{buildBase.upgradesCurrerntRef.level} {buildBase.upgradesCurrerntRef.displayName}";
+                buildBase.nameDisplay = nameDisplay;
                 if (buildBase.buildingBaseRef.isResidence) return;
 
                 //AutoEarnClick
-                buildBase.GetComponent<AutoEarnClick>().SetPrefeb(GameManager.Instance.UpgradeBuildingUI().earnPrefab, GameManager.Instance.UpgradeBuildingUI().earnParent);
+                buildBase.GetComponent<AutoEarnClick>().SetPrefeb(upgradeBuildingUI.earnPrefab, upgradeBuildingUI.earnParent);
                 buildBase.GetComponent<AutoEarnClick>().SetEarn(buildBase.upgradesCurrerntRef.earnClick, buildBase.upgradesCurrerntRef.effectType);
 
                 //AutoEarnMain
                 buildBase.GetComponent<AutoEarnMain>().SetEarn(buildBase.upgradesCurrerntRef.earnMain, buildBase.upgradesCurrerntRef.effectType);
                 buildBase.GetComponent<AutoEarnMain>().SetFillBCBar(GameManager.Instance.Currency().fillFoodImg);
+
             });
             /*
             if (currentEraModel.envPrefab != null)

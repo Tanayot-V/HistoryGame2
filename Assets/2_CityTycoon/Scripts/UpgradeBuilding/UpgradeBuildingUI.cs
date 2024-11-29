@@ -34,9 +34,11 @@ namespace CityTycoon
         [SerializeField] private Image buildImg_0;
         [SerializeField] private Button buttonUpgrade_0;
 
-        [Header("Auto Earn Material")]
+        [Header("Auto Earn and Name")]
         public GameObject earnParent;
         public GameObject earnPrefab;
+        public GameObject nameParent;
+        public GameObject namePrefab;
 
         private void SetInstance()
         {

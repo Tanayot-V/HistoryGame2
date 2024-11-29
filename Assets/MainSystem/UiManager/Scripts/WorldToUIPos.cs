@@ -5,10 +5,10 @@ using UnityEngine;
 public class WorldToUIPos : MonoBehaviour
 {
     public Transform targetTransform;
-    public float offset = 200;
-    private float offsetmultiplyer;
-    private static float startCamSize = -1f;
-    private float calOffset;
+    public float offsetX = 0f; // Offset ในแนวนอน
+    public float offsetY = 200f; // Offset ในแนวตั้ง
+    private float offsetMultiplier;
+    private float startCamSize = -1f;
     private Camera mCam;
 
     void Start()
@@ -26,6 +26,7 @@ public class WorldToUIPos : MonoBehaviour
     {
         if (targetTransform != null)
         {
+            // คำนวณตำแหน่งจอภาพจากตำแหน่ง World
             Vector3 screenPosition = Camera.main.WorldToScreenPoint(targetTransform.position);
             RectTransformUtility.ScreenPointToLocalPointInRectangle(
                 this.GetComponent<RectTransform>().parent as RectTransform,
@@ -33,10 +34,14 @@ public class WorldToUIPos : MonoBehaviour
                 Camera.main,
                 out Vector2 localPoint);
 
-            offsetmultiplyer = startCamSize / mCam.orthographicSize;
-            calOffset = offset * offsetmultiplyer;
+            // คำนวณ offsetMultiplier
+            offsetMultiplier = startCamSize / mCam.orthographicSize;
 
-            localPoint.y += calOffset;
+            // เพิ่ม OffsetX และ OffsetY
+            localPoint.x += offsetX * offsetMultiplier;
+            localPoint.y += offsetY * offsetMultiplier;
+
+            // อัปเดตตำแหน่งของ RectTransform
             this.GetComponent<RectTransform>().localPosition = localPoint;
         }
     }

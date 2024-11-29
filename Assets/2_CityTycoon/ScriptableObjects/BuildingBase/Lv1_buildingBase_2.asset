@@ -13,12 +13,13 @@ MonoBehaviour:
   m_Name: Lv1_buildingBase_2
   m_EditorClassIdentifier: 
   baseID: Lv1_BuildingBase_2
-  displayName: "\u0E15\u0E49\u0E19\u0E44\u0E21\u0E49"
-  position: {x: -4.725, y: -11.75, z: 0}
+  displayName: "#\u0E41\u0E2B\u0E25\u0E48\u0E07\u0E2D\u0E32\u0E2B\u0E32\u0E231"
+  position: {x: -3.825, y: -10.125, z: 0}
   isResidence: 0
   upgrades:
-  - level: Level_1
+  - level: Lv.1
     displayName: "\u0E15\u0E49\u0E19\u0E44\u0E21\u0E49"
+    nameOffset: {x: -20, y: 350}
     icon: {fileID: 21300000, guid: 5b1cd1aba25864831bfd63b7a5ffed82, type: 3}
     sprite: {fileID: 21300000, guid: 5b1cd1aba25864831bfd63b7a5ffed82, type: 3}
     prefab: {fileID: 6536528719716053498, guid: 8c4b647fa557543ad9343c82476f1a35, type: 3}
@@ -36,8 +37,9 @@ MonoBehaviour:
       earnType: 3
       range: 0000000004000000
       timeSpawn: 5
-  - level: Level_2
+  - level: Lv.2
     displayName: "\u0E19\u0E32\u0E02\u0E49\u0E32\u0E27\u0E40\u0E25\u0E47\u0E01"
+    nameOffset: {x: -20, y: 350}
     icon: {fileID: 21300000, guid: 519681932649b43169942f6894723790, type: 3}
     sprite: {fileID: 21300000, guid: 519681932649b43169942f6894723790, type: 3}
     prefab: {fileID: 1588506320180713248, guid: 6f6c73d98c6074016beb9ca92e7192a0, type: 3}
@@ -55,8 +57,9 @@ MonoBehaviour:
       earnType: 3
       range: 0000000007000000
       timeSpawn: 5
-  - level: Level_3
-    displayName: "\u0E41\u0E1B\u0E25\u0E07\u0E19\u0E32\u0E43\u0E2B\u0E0D\u0E48"
+  - level: Lv.3
+    displayName: "\u0E19\u0E32\u0E02\u0E49\u0E32\u0E27"
+    nameOffset: {x: -20, y: 350}
     icon: {fileID: 21300000, guid: 449ecf7efdb354fd3aab6a385818cce1, type: 3}
     sprite: {fileID: 21300000, guid: 449ecf7efdb354fd3aab6a385818cce1, type: 3}
     prefab: {fileID: 1588506320180713248, guid: 6719b31a6a0694026a6969f137f700b9, type: 3}

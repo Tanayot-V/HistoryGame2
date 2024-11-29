@@ -12,9 +12,11 @@ namespace CityTycoon
         public List<Upgrade> upgradesRef;
         public Upgrade upgradesCurrerntRef;
         public Upgrade upgradesTargetRef;
+        public WorldToUIPos nameDisplay;
 
         [Header("<color=green>State.</color>")]
         public BuildingBaseState state = new BuildingBaseState();
+        private SpriteRenderer buildingSR;
         private UpgradeBuilding upgradeBuilding;
         private UpgradeBuildingUI upgradeBuildingUI;
 
@@ -43,6 +45,7 @@ namespace CityTycoon
             this.GetComponent<BoxCollider2D>().offset = asset.GetComponent<BoxCollider2D>().offset;
             this.GetComponent<BoxCollider2D>().size = asset.GetComponent<BoxCollider2D>().size;
             asset.GetComponent<BoxCollider2D>().enabled = false;
+            buildingSR = asset.transform.GetChild(0).GetComponent<SpriteRenderer>();
 
             //effect upgrades
             if (asset.transform.childCount >= 2)
@@ -56,6 +59,14 @@ namespace CityTycoon
                         asset.transform.GetChild(1).gameObject.SetActive(false);
                     }));
                 }
+            }
+
+            //Name Display
+            if (nameDisplay != null)
+            {
+                nameDisplay.offsetX = upgradesCurrerntRef.nameOffset.x;
+                nameDisplay.offsetY = upgradesCurrerntRef.nameOffset.y;
+                nameDisplay.transform.GetChild(0).GetComponent<TMPro.TextMeshProUGUI>().text = $"{upgradesCurrerntRef.level} {upgradesCurrerntRef.displayName}";
             }
         }
         
@@ -80,6 +91,22 @@ namespace CityTycoon
                 }*/
             }));
             SoundManager.Instance.PlayAudioSource("Eff_1");
+        }
+
+        private void OnMouseOver()
+        {
+            if (buildingSR != null)
+            {
+                buildingSR.color = new Color(0.85f, 0.85f, 0.85f, 1f); // สีเทาอ่อน
+            }
+        }
+
+        private void OnMouseExit()
+        {
+            if (buildingSR != null)
+            {
+                buildingSR.color = Color.white;
+            }
         }
     }
 }

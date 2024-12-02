@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/2_CityTycoon/Scenes/CityTycoon.unity
     guid: 447ab5c83b63b4c78bf4316a05a79f1b
   - enabled: 1
-    path: Assets/2_CityTycoon/Scenes/CityTycoon_Loading.unity
+    path: Assets/2_CityTycoon/Scenes/CityTycoon_Lobby.unity
     guid: fbb90f7d99a4043858d78af171e95e3f
   - enabled: 1
     path: Assets/2_CityTycoon/Scenes/CityTycoon_Main.unity

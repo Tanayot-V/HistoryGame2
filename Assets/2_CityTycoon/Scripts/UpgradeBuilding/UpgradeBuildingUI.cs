@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -50,14 +49,12 @@ namespace CityTycoon
         public void HideBuildUIObj()
         {
             if (!buildUIObj.activeSelf) return;
-            buildUIObj.SetActive(false);
             Time.timeScale = 1;
-        }
 
-        public void ShowUpgradeUICallBack(System.Action callback)
-        {
-            //ShowUpgradeUI()
-            callback?.Invoke(); // เรียก Callback เมื่อทำงานเสร็จ
+            GameObject content = buildUIObj.transform.GetChild(0).gameObject;
+            UITransition.Instance.SlideOneY(content, Vector2.zero, new Vector2(0, -500),0.5f, () => {
+                buildUIObj.SetActive(false);
+            });
         }
 
         bool isCanUpgrade;
@@ -69,9 +66,10 @@ namespace CityTycoon
             SetInstance();
 
             upgradeBuilding.SetCurrentBuildingBase(_buildBaseObj);
-            buildUIObj.SetActive(true); //Transition
-            UIView(_buildBaseObj.state.baseID, _buildBaseObj.state.level);
+            //buildUIObj.SetActive(true); //Transition
+            Transition();
             Time.timeScale = 0;
+            UIView(_buildBaseObj.state.baseID, _buildBaseObj.state.level);
 
             void UIView(string _buildingID, int _level)
             {
@@ -113,6 +111,13 @@ namespace CityTycoon
                 //buttonUpgrade.onClick.RemoveAllListeners();
                 //buttonUpgrade.onClick.AddListener(OnButtonClick);
 
+            }
+
+            void Transition()
+            {
+                buildUIObj.SetActive(true);
+                GameObject content = buildUIObj.transform.GetChild(0).gameObject;
+                UITransition.Instance.SlideOneY(content,new Vector2(0,-500), Vector2.zero,0.35f);
             }
         }
 

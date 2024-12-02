@@ -22,8 +22,7 @@ namespace CityTycoon
             if(Input.GetKeyDown(KeyCode.V))
             {
                 OnVictory();
-            }
-            */
+            }*/
         }
         private void InitUIView()
         {
@@ -53,27 +52,40 @@ namespace CityTycoon
 
         public void OnVictory()
         {
-            Time.timeScale = 0;
             InitUIView();
             victoryGO.SetActive(true);
             isSummary = true;
+            Time.timeScale = 0;
+
+            GameObject content = victoryGO.transform.GetChild(1).gameObject;
+            content.GetComponent<UIBounceAnimation>().enabled = false;
+            UITransition.Instance.ScaleOneSet(content.gameObject,new Vector3(1.5f,1.5f,1.5f), Vector3.one,0.5f, () => {
+                content.GetComponent<UIBounceAnimation>().enabled = true;
+            });
         }
 
         public void OnLose()
         {
             if (isSummary) return;
-            
-            Time.timeScale = 0;
             InitUIView();
             loseGO.SetActive(true);
             isSummary = true;
+            Time.timeScale = 0;
+
+            GameObject content = loseGO.transform.GetChild(1).gameObject;
+            content.GetComponent<UIBounceAnimation>().enabled = false;
+            UITransition.Instance.ScaleOneSet(content.gameObject, new Vector3(1.5f, 1.5f, 1.5f), Vector3.one, 0.5f, () => {
+                content.GetComponent<UIBounceAnimation>().enabled = true;
+            });
         }
 
         public void OnTrivia()
         {
-            Time.timeScale = 0;
             InitUIView();
             triviaGO.SetActive(true);
+            Time.timeScale = 0;
+            GameObject content = triviaGO.transform.GetChild(1).gameObject;
+            UITransition.Instance.CanvasGroupAlpha(content.gameObject, 0, 1, 1, null);
         }
 
         public void OnClickTrivia(string _name)

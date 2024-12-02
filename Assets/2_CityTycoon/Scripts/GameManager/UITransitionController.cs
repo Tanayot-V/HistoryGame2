@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace CityTycoon
 {
-    public class UITransitionController : MonoBehaviour
+    public class UITransitionController : Singletons<UITransitionController>
     {
         private float[] duration;
         public GameObject[] goObjs;
